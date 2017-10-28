@@ -19,4 +19,4 @@ EXPOSE 9091 45555/tcp 45555/udp
 
 ENTRYPOINT ["/usr/bin/transmission-daemon"]
 
-CMD ["--foreground", "--config-dir=/"]
+CMD ["--foreground", "--config-dir=/transmission/config", "--log-info", "--peerport=45555", "--watch-dir=/transmission/watch", "--download-dir=/transmission/downloads", "--incomplete-dir=/transmission/incomplete"]
