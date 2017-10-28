@@ -13,6 +13,7 @@ RUN mkdir -p /transmission/downloads \
     /transmission/incomplete \
     /transmission/watch \
     /transmission/config \
+    /root/downloads/tv
 
 EXPOSE 9091 45555/tcp 45555/udp
 
