@@ -9,9 +9,12 @@ RUN apk add --update \
     transmission-daemon \
     && rm -rf /var/cache/apk/*
 
-EXPOSE 9092 51413/tcp 51413/udp
+RUN mkdir -p /transmission/downloads \
+    /transmission/incomplete \
+    /transmission/watch \
+    /transmission/config \
 
-ADD ./settings.json /settings.json
+EXPOSE 9091 45555/tcp 45555/udp
 
 ENTRYPOINT ["/usr/bin/transmission-daemon"]
 
