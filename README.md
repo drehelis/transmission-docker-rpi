@@ -12,7 +12,7 @@ docker build -t autogun/transmission .
 ```
 docker run -d --name transmission --restart=always \
 	--volume="/mnt/wd600/transmission-client/config/:/transmission/config" \
-	--volume="/mnt/wd600/:/transmission/downloands" \
+	--volume="/mnt/wd600/:/transmission/downloads" \
 	--volume="/mnt/wd600/transmission-client/watch/:/transmission/watch" \
 	--publish=9091:9091 --publish 45555:45555/tcp --publish 45555:45555/udp \
 	autogun/transmission
