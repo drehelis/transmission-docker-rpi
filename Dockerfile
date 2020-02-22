@@ -1,6 +1,6 @@
-FROM arm32v6/alpine:latest
+FROM alpine:latest
 
-LABEL maintainer "autogun@gmail.com"
+LABEL maintainer="Danny Rehelis <autogun@gmail.com>"
 
 VOLUME [ "/sys/fs/cgroup" ]
 
